@@ -24,11 +24,22 @@ public class Project1   {
 
             case 1002:
                 name = "Sushma";
-                code = 'e';
-                dept = "R&D";
-                basic = 20000;
+                code = 'c';
+                dept = "PM";
+                basic = 30000;
+                hra = 12000;
+                it = 9000;
+                send = basic + hra - it;
+                display(input,name,dept,code,send);
+                break;
+
+            case 1003:
+                name = "Rahul";
+                code = 'k';
+                dept = "Acct";
+                basic = 10000;
                 hra = 8000;
-                it = 3000;
+                it = 1000;
                 send = basic + hra - it;
                 display(input,name,dept,code,send);
                 break;
