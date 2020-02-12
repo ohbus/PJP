@@ -1,4 +1,6 @@
-public class Project1   {
+package JavaFundamentals.MiniProject;
+
+public class Project1   {    
     public static void main(String[] args) {
         final int input = Integer.parseInt(args[0]);
         
