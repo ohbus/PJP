@@ -1,0 +1,8 @@
+package com.wipro.automobile.ship;
+
+class Compartment
+{
+	private double height;
+	private double width;
+	private double breadth;
+}
