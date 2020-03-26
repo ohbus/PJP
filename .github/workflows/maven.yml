@@ -1,6 +1,3 @@
-# This workflow will build a Java project with Maven
-# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
-
 name: Java CI with Maven
 
 on:
@@ -10,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build-tm01:
+  clean-tm01:
 
     runs-on: ubuntu-latest
 
@@ -21,10 +18,10 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B package --file pjp.tm01/pom.xml
+      run: mvn -B clean --file pjp.tm01/pom.xml
   
   
-  build-tm02:
+  clean-tm02:
 
     runs-on: ubuntu-latest
 
@@ -35,10 +32,10 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B package --file pjp.tm02/pom.xml
+      run: mvn -B clean --file pjp.tm02/pom.xml
   
   
-  build-tm03:
+  clean-tm03:
 
     runs-on: ubuntu-latest
 
@@ -49,10 +46,10 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B package --file pjp.tm03/pom.xml
+      run: mvn -B clean --file pjp.tm03/pom.xml
   
   
-  build-tm04:
+  clean-tm04:
 
     runs-on: ubuntu-latest
 
@@ -63,10 +60,10 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B package --file pjp.tm04/pom.xml
+      run: mvn -B clean --file pjp.tm04/pom.xml
   
   
-  build-tm05:
+  clean-tm05:
 
     runs-on: ubuntu-latest
 
@@ -77,10 +74,10 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B package --file pjp.tm05/pom.xml
+      run: mvn -B clean --file pjp.tm05/pom.xml
   
   
-  build-tm06:
+  clean-tm06:
 
     runs-on: ubuntu-latest
 
@@ -91,10 +88,10 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B package --file pjp.tm06/pom.xml
+      run: mvn -B clean --file pjp.tm06/pom.xml
   
   
-  build-tm07:
+  clean-tm07:
 
     runs-on: ubuntu-latest
 
@@ -105,4 +102,4 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B package --file pjp.tm07/pom.xml
+      run: mvn -B clean --file pjp.tm07/pom.xml
