@@ -35,7 +35,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B package --file pjp.tm02pom.xml
+      run: mvn -B package --file pjp.tm02/pom.xml
   
   
   build-tm03:
@@ -49,7 +49,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B package --file pjp.tm03pom.xml
+      run: mvn -B package --file pjp.tm03/pom.xml
   
   
   build-tm04:
