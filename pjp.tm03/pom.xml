@@ -4,8 +4,16 @@
 
   <groupId>com.subho.wipro</groupId>
   <artifactId>pjp.tm03</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0</version>
   <packaging>jar</packaging>
+  
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Subhrodip Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/ohbus/PJP</url>
+		</repository>
+	</distributionManagement>
 
   <name>pjp.tm03</name>
   <url>http://maven.apache.org</url>
