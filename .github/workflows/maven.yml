@@ -7,900 +7,28 @@ on:
     branches: [ '**' ]
 
 jobs:
-  clean-tm01-ubuntu:
+  build-tm01:
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
+        include:
+        - os: macos-latest
+          TARGET: x86_64-apple-darwin
+          COMPILER: clang
+          LINKER: clang
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm01/pom.xml
-  
-  
-  clean-tm02-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm02/pom.xml
-  
-  
-  clean-tm03-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm03/pom.xml
-  
-  
-  clean-tm04-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm04/pom.xml
-  
-  
-  clean-tm05-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm05/pom.xml
-  
-  
-  clean-tm06-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm06/pom.xml
-  
-  
-  clean-tm07-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm07/pom.xml
-
-  compile-tm01-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm01/pom.xml
-  
-  
-  compile-tm02-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm02/pom.xml
-  
-  
-  compile-tm03-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm03/pom.xml
-  
-  
-  compile-tm04-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm04/pom.xml
-  
-  
-  compile-tm05-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm05/pom.xml
-  
-  
-  compile-tm06-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm06/pom.xml
-  
-  
-  compile-tm07-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm07/pom.xml
-
-
-  test-tm01-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm01/pom.xml
-  
-  
-  test-tm02-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm02/pom.xml
-  
-  
-  test-tm03-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm03/pom.xml
-  
-  
-  test-tm04-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm04/pom.xml
-  
-  
-  test-tm05-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm05/pom.xml
-  
-  
-  test-tm06-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm06/pom.xml
-  
-  
-  test-tm07-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm07/pom.xml
-
-  build-tm01-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm01/pom.xml
-  
-  
-  build-tm02-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm02/pom.xml
-  
-  
-  build-tm03-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm03/pom.xml
-  
-  
-  build-tm04-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm04/pom.xml
-  
-  
-  build-tm05-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm05/pom.xml
-  
-  
-  build-tm06-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm06/pom.xml
-  
-  
-  build-tm07-ubuntu:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm07/pom.xml
-
-
-  clean-tm01-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm01/pom.xml
-  
-  
-  clean-tm02-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm02/pom.xml
-  
-  
-  clean-tm03-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm03/pom.xml
-  
-  
-  clean-tm04-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm04/pom.xml
-  
-  
-  clean-tm05-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm05/pom.xml
-  
-  
-  clean-tm06-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm06/pom.xml
-  
-  
-  clean-tm07-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm07/pom.xml
-
-  compile-tm01-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm01/pom.xml
-  
-  
-  compile-tm02-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm02/pom.xml
-  
-  
-  compile-tm03-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm03/pom.xml
-  
-  
-  compile-tm04-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm04/pom.xml
-  
-  
-  compile-tm05-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm05/pom.xml
-  
-  
-  compile-tm06-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm06/pom.xml
-  
-  
-  compile-tm07-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm07/pom.xml
-
-
-  test-tm01-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm01/pom.xml
-  
-  
-  test-tm02-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm02/pom.xml
-  
-  
-  test-tm03-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm03/pom.xml
-  
-  
-  test-tm04-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm04/pom.xml
-  
-  
-  test-tm05-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm05/pom.xml
-  
-  
-  test-tm06-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm06/pom.xml
-  
-  
-  test-tm07-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm07/pom.xml
-
-  build-tm01-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm01/pom.xml
-  
-  
-  build-tm02-windows:
-
-    runs-on: windows-latest
+        - os: ubuntu-latest
+          TARGET: armv7-unknown-linux-musleabihf
+          COMPILER: arm-linux-gnueabihf-gcc-5
+          LINKER: gcc-5-arm-linux-gnueabihf
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm02/pom.xml
-  
-  
-  build-tm03-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm03/pom.xml
-  
-  
-  build-tm04-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm04/pom.xml
-  
-  
-  build-tm05-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm05/pom.xml
-  
-  
-  build-tm06-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm06/pom.xml
-  
-  
-  build-tm07-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm07/pom.xml
-
-  clean-tm01-macos:
-
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm01/pom.xml
-  
-  
-  clean-tm02-macos:
-
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm02/pom.xml
-  
-  
-  clean-tm03-macos:
-
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm03/pom.xml
-  
-  
-  clean-tm04-macos:
-
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm04/pom.xml
-  
-  
-  clean-tm05-macos:
-
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm05/pom.xml
-  
-  
-  clean-tm06-macos:
-
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm06/pom.xml
-  
-  
-  clean-tm07-macos:
-
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean --file pjp.tm07/pom.xml
-
-  compile-tm01-macos:
-
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm01/pom.xml
-  
-  
-  compile-tm02-macos:
+        - os: ubuntu-latest
+          TARGET: x86_64-unknown-linux-musl
+          COMPILER: gcc
+          LINKER: gcc
 
-    runs-on: macos-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 1.8
@@ -908,26 +36,30 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm02/pom.xml
+      run: mvn -B clean install --file pjp.tm01/pom.xml
   
   
-  compile-tm03-macos:
+  build-tm02:
 
-    runs-on: macos-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
+        include:
+        - os: macos-latest
+          TARGET: x86_64-apple-darwin
+          COMPILER: clang
+          LINKER: clang
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm03/pom.xml
-  
-  
-  compile-tm04-macos:
+        - os: ubuntu-latest
+          TARGET: armv7-unknown-linux-musleabihf
+          COMPILER: arm-linux-gnueabihf-gcc-5
+          LINKER: gcc-5-arm-linux-gnueabihf
 
-    runs-on: macos-latest
+        - os: ubuntu-latest
+          TARGET: x86_64-unknown-linux-musl
+          COMPILER: gcc
+          LINKER: gcc
 
     steps:
     - uses: actions/checkout@v2
@@ -936,26 +68,30 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm04/pom.xml
+      run: mvn -B clean install --file pjp.tm02/pom.xml
   
   
-  compile-tm05-macos:
+  build-tm03:
 
-    runs-on: macos-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
+        include:
+        - os: macos-latest
+          TARGET: x86_64-apple-darwin
+          COMPILER: clang
+          LINKER: clang
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm05/pom.xml
-  
-  
-  compile-tm06-macos:
+        - os: ubuntu-latest
+          TARGET: armv7-unknown-linux-musleabihf
+          COMPILER: arm-linux-gnueabihf-gcc-5
+          LINKER: gcc-5-arm-linux-gnueabihf
 
-    runs-on: macos-latest
+        - os: ubuntu-latest
+          TARGET: x86_64-unknown-linux-musl
+          COMPILER: gcc
+          LINKER: gcc
 
     steps:
     - uses: actions/checkout@v2
@@ -964,40 +100,30 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm06/pom.xml
+      run: mvn -B clean install --file pjp.tm03/pom.xml
   
   
-  compile-tm07-macos:
-
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean compile --file pjp.tm07/pom.xml
-
-
-  test-tm01-macos:
+  build-tm04:
 
-    runs-on: macos-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
+        include:
+        - os: macos-latest
+          TARGET: x86_64-apple-darwin
+          COMPILER: clang
+          LINKER: clang
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm01/pom.xml
-  
-  
-  test-tm02-macos:
+        - os: ubuntu-latest
+          TARGET: armv7-unknown-linux-musleabihf
+          COMPILER: arm-linux-gnueabihf-gcc-5
+          LINKER: gcc-5-arm-linux-gnueabihf
 
-    runs-on: macos-latest
+        - os: ubuntu-latest
+          TARGET: x86_64-unknown-linux-musl
+          COMPILER: gcc
+          LINKER: gcc
 
     steps:
     - uses: actions/checkout@v2
@@ -1006,26 +132,30 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm02/pom.xml
+      run: mvn -B clean install --file pjp.tm04/pom.xml
   
   
-  test-tm03-macos:
+  build-tm05:
 
-    runs-on: macos-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
+        include:
+        - os: macos-latest
+          TARGET: x86_64-apple-darwin
+          COMPILER: clang
+          LINKER: clang
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm03/pom.xml
-  
-  
-  test-tm04-macos:
+        - os: ubuntu-latest
+          TARGET: armv7-unknown-linux-musleabihf
+          COMPILER: arm-linux-gnueabihf-gcc-5
+          LINKER: gcc-5-arm-linux-gnueabihf
 
-    runs-on: macos-latest
+        - os: ubuntu-latest
+          TARGET: x86_64-unknown-linux-musl
+          COMPILER: gcc
+          LINKER: gcc
 
     steps:
     - uses: actions/checkout@v2
@@ -1034,26 +164,30 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm04/pom.xml
+      run: mvn -B clean install --file pjp.tm05/pom.xml
   
   
-  test-tm05-macos:
+  build-tm06:
 
-    runs-on: macos-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
+        include:
+        - os: macos-latest
+          TARGET: x86_64-apple-darwin
+          COMPILER: clang
+          LINKER: clang
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm05/pom.xml
-  
-  
-  test-tm06-macos:
+        - os: ubuntu-latest
+          TARGET: armv7-unknown-linux-musleabihf
+          COMPILER: arm-linux-gnueabihf-gcc-5
+          LINKER: gcc-5-arm-linux-gnueabihf
 
-    runs-on: macos-latest
+        - os: ubuntu-latest
+          TARGET: x86_64-unknown-linux-musl
+          COMPILER: gcc
+          LINKER: gcc
 
     steps:
     - uses: actions/checkout@v2
@@ -1062,39 +196,30 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm06/pom.xml
+      run: mvn -B clean install --file pjp.tm06/pom.xml
   
   
-  test-tm07-macos:
-
-    runs-on: macos-latest
+  build-tm07:
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean test --file pjp.tm07/pom.xml
-
-  build-tm01-macos:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
+        include:
+        - os: macos-latest
+          TARGET: x86_64-apple-darwin
+          COMPILER: clang
+          LINKER: clang
 
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm01/pom.xml
-  
-  
-  build-tm02-macos:
+        - os: ubuntu-latest
+          TARGET: armv7-unknown-linux-musleabihf
+          COMPILER: arm-linux-gnueabihf-gcc-5
+          LINKER: gcc-5-arm-linux-gnueabihf
 
-    runs-on: macos-latest
+        - os: ubuntu-latest
+          TARGET: x86_64-unknown-linux-musl
+          COMPILER: gcc
+          LINKER: gcc
 
     steps:
     - uses: actions/checkout@v2
@@ -1103,26 +228,30 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm02/pom.xml
-  
-  
-  build-tm03-macos:
+      run: mvn -B clean install --file pjp.tm07/pom.xml
+      
+      
+  build-tm08:
 
-    runs-on: macos-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
+        include:
+        - os: macos-latest
+          TARGET: x86_64-apple-darwin
+          COMPILER: clang
+          LINKER: clang
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm03/pom.xml
-  
-  
-  build-tm04-macos:
+        - os: ubuntu-latest
+          TARGET: armv7-unknown-linux-musleabihf
+          COMPILER: arm-linux-gnueabihf-gcc-5
+          LINKER: gcc-5-arm-linux-gnueabihf
 
-    runs-on: macos-latest
+        - os: ubuntu-latest
+          TARGET: x86_64-unknown-linux-musl
+          COMPILER: gcc
+          LINKER: gcc
 
     steps:
     - uses: actions/checkout@v2
@@ -1131,40 +260,30 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm04/pom.xml
-  
-  
-  build-tm05-macos:
+      run: mvn -B clean install --file pjp.tm08/pom.xml
 
-    runs-on: macos-latest
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm05/pom.xml
-  
-  
-  build-tm06-macos:
+  build-tm09:
 
-    runs-on: macos-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
+        include:
+        - os: macos-latest
+          TARGET: x86_64-apple-darwin
+          COMPILER: clang
+          LINKER: clang
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm06/pom.xml
-  
-  
-  build-tm07-macos:
+        - os: ubuntu-latest
+          TARGET: armv7-unknown-linux-musleabihf
+          COMPILER: arm-linux-gnueabihf-gcc-5
+          LINKER: gcc-5-arm-linux-gnueabihf
 
-    runs-on: macos-latest
+        - os: ubuntu-latest
+          TARGET: x86_64-unknown-linux-musl
+          COMPILER: gcc
+          LINKER: gcc
 
     steps:
     - uses: actions/checkout@v2
@@ -1173,5 +292,5 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean package --file pjp.tm07/pom.xml
+      run: mvn -B clean install --file pjp.tm09/pom.xml
 
