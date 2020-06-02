@@ -2,9 +2,9 @@ name: Java CI
 
 on:
   push:
-    branches: [ '*' ]
+    branches: [ '**' ]
   pull_request:
-    branches: [ '*' ]
+    branches: [ '**' ]
 
 jobs:
   clean-tm01-ubuntu:
