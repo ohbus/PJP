@@ -1,0 +1,7 @@
+CREATE TABLE DEPT(
+Dept_ID NUMBER(7) PRIMARY KEY,
+Dept_name VARCHAR2(20)
+);
+
+
+DESCRIBE dept;
