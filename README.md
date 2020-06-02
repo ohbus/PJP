@@ -11,9 +11,9 @@ Use these modules for your referneces and only if you have access to the questio
 
 
 
-## Use Eclipse to import these projects divided as each tech modules.
-## All are built using Maven.
+### Use Eclipse to import these projects divided as each tech modules.
+### All are built using Maven.
 
 
 
-### Put a :star: if this helped you. Send a PR if you think this needs an update
+Put a :star: if this helped you. Send a PR if you think this needs an update
