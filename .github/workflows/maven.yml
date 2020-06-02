@@ -19,8 +19,6 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B clean install --file pjp.tm01/pom.xml
-    - name: publish jar for build01
-      run: actions/upload-artifact@v1
   
   
   build-tm02:
@@ -35,8 +33,6 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B clean install --file pjp.tm02/pom.xml
-    - name: publish jar for build02
-      run: actions/upload-artifact@v1
   
   
   build-tm03:
@@ -51,8 +47,6 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B clean install --file pjp.tm03/pom.xml
-    - name: publish jar for build03
-      run: actions/upload-artifact@v1
   
   
   build-tm04:
@@ -67,8 +61,6 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B clean install --file pjp.tm04/pom.xml
-    - name: publish jar for build04
-      run: actions/upload-artifact@v1
   
   
   build-tm05:
@@ -83,8 +75,6 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B clean install --file pjp.tm05/pom.xml
-    - name: publish jar for build05
-      run: actions/upload-artifact@v1
   
   
   build-tm06:
@@ -99,8 +89,6 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B clean install --file pjp.tm06/pom.xml
-    - name: publish jar for build06
-      run: actions/upload-artifact@v1
   
   
   build-tm07:
@@ -115,8 +103,6 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B clean install --file pjp.tm07/pom.xml
-    - name: publish jar for build07
-      run: actions/upload-artifact@v1
       
       
   build-tm08:
@@ -131,8 +117,6 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B clean install --file pjp.tm08/pom.xml
-    - name: publish jar for build08
-      run: actions/upload-artifact@v1
 
 
   build-tm09:
@@ -147,5 +131,4 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B clean install --file pjp.tm09/pom.xml
-    - name: publish jar for build09
-      run: actions/upload-artifact@v1
+
