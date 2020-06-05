@@ -6,6 +6,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import pjp.tm11.xyz.subho.login.bean.UserBean;
+import pjp.tm11.xyz.subho.login.dao.UserDAO;
+
 /**
  * Servlet implementation class LoginServlet
  */
@@ -33,7 +36,18 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		response.getWriter().append("WIP");
+		String uname  = request.getParameter("uname");
+		String passwd = request.getParameter("passwd");
+		
+		UserBean ub = new UserBean();
+		ub.setUname(uname);
+		ub.setPasswd(passwd);
+		
+		UserDAO userDao = new UserDAO();
+		
+		if(userDao.isPresent(ub))	{
+			response.getWriter().append("<h1>Welcome</h1> <h2>").append(uname).append("</h2>");
+		}
 	}
 
 }
