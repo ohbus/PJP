@@ -7,14 +7,20 @@
   <servlet>
   	<servlet-name>Demo</servlet-name>
   	<display-name>Demo</display-name>
-  	<description></description>
+  	<description>Demo Testing Only</description>
   	<servlet-class>pjp.tm11.xyz.subho.demo.Demo</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>LoginServlet</servlet-name>
   	<display-name>LoginServlet</display-name>
-  	<description></description>
+  	<description>Servlet for Logging In the server</description>
   	<servlet-class>pjp.tm11.xyz.subho.login.controller.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UserRegistrationServlet</servlet-name>
+  	<display-name>UserRegistrationServlet</display-name>
+  	<description>New User Registration Servlet</description>
+  	<servlet-class>pjp.tm11.xyz.subho.login.controller.UserRegistrationServlet</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>Demo</servlet-name>
@@ -23,5 +29,9 @@
   <servlet-mapping>
   	<servlet-name>LoginServlet</servlet-name>
   	<url-pattern>/login/LoginServlet</url-pattern> <!-- MYTH BUSTER  -->
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UserRegistrationServlet</servlet-name>
+  	<url-pattern>/login/UserRegistrationServlet</url-pattern>
   </servlet-mapping>
 </web-app>

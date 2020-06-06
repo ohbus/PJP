@@ -3,18 +3,20 @@ package pjp.tm11.xyz.subho.login.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import pjp.tm11.xyz.subho.login.util.DBUtil;
 import pjp.tm11.xyz.subho.login.bean.UserBean;
 
-public class UserDAO {
+public class UserLoginDAO {
 	
 	@SuppressWarnings("finally")
-	public boolean isPresent(UserBean ub)	{
+	public boolean isPresent(UserBean ub) throws SQLException	{
 		String query = "SELECT * FROM user WHERE username=? AND password=?";
 		boolean present = false;
+		Connection con = null;
 		try	{
-			Connection con = DBUtil.getConnection();
+			con = DBUtil.getConnection();
 			PreparedStatement ps = con.prepareStatement(query);
 			
 			ps.setString(1, ub.getUname());
@@ -26,9 +28,11 @@ public class UserDAO {
 				present = true;
 		}
 		catch(Exception e)	{
+			System.out.println("Cannot FIND User");
 			e.printStackTrace();
 		}
 		finally	{
+			con.close();
 			return present;
 		}
 	}	

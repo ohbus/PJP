@@ -7,18 +7,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import pjp.tm11.xyz.subho.login.bean.UserBean;
-import pjp.tm11.xyz.subho.login.dao.UserLoginDAO;
+import pjp.tm11.xyz.subho.login.dao.UserRegistrationDAO;
 
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class UserRegistrationServlet
  */
-public class LoginServlet extends HttpServlet {
+public class UserRegistrationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LoginServlet() {
+    public UserRegistrationServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -27,15 +27,16 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println("GET method invoked");
 		response.sendError(HttpServletResponse.SC_FORBIDDEN);
 	}
-	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		// TODO Auto-generated method stub
 		try {
 			String uname  = request.getParameter("uname");
 			String passwd = request.getParameter("passwd");
@@ -44,21 +45,21 @@ public class LoginServlet extends HttpServlet {
 			ub.setUname(uname);
 			ub.setPasswd(passwd);
 			
-			UserLoginDAO userDao = new UserLoginDAO();
+			UserRegistrationDAO userDao = new UserRegistrationDAO();
 			
-			if(userDao.isPresent(ub))	{
-				response.getWriter().append("<h1>Welcome ").append(uname).append("!</h1>");
+			if(userDao.newUser(ub))	{
+				response.getWriter().append("<h1>Successful Registration ").append(uname).append("!</h1>");
 			}
 			else	{
-				response.getWriter().append("Incorrect username or password");
-				System.out.println("Exception occured while UserLoginDAO");
+				System.out.println("Exception occured while UserRegistrationDAO");
+				response.getWriter().append("Please try again later!");
 			}
 		}
 		catch(Exception e) {
 			response.getWriter().append("Please try again later!");
-			System.out.println("Exception occured in LoginServlet");
+			System.out.println("Exception occured in UserRegistrationServlet");
 			e.printStackTrace();
 		}
 	}
-	
+
 }
