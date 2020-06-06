@@ -222,6 +222,22 @@ iframe {
   background-color: #fff;
 }
 
+.wrap-input101 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  width: 100%;
+  height: 75px;
+  position: relative;
+  border: 1px solid #e0e0e0;
+  border-bottom: none;
+  background-color: #fff;
+}
+
 .wrap-input100.rs1 {
   border-top-left-radius: 12px;
   border-right: none;
