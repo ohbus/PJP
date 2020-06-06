@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<style>
+table{
+	margin: 10% 25%;
+	
+	width: 50%;
+	border-spacing: 0px;
+	align: center;
+	display: inline-block;
+}
+th{
+	border-bottom: Solid 2px black;
+
+}
+td{
+	border: Solid 2px black;
+	border-top: 0px;
+	border-bottom: 0px;
+	padding: 7px 10px;
+}
+td#t01{
+	padding:7px 20%;
+	border-bottom: Solid 2px black;
+}
+input[type=text]{
+  width: 100%;
+}
+input[type=submit]{
+  width: 100%;
+}
+input[type=reset]{
+  width: 100%;
+}
+
+select{
+  width: 100%;
+}
+
+</style>
+<div id="d01"></div>
+<table>
+		<tr><th>Visitors Information</th><tr>
+		<tr>
+		<td>
+		<form>
+			<label>Email Address : </label>
+				<input type="email" name="email" placeholder="abc@xyz.com" required multiple>
+			<br><br>
+			<label>User's Interest :</label><br>
+				<input type="radio" name="Research" values="research">
+				<label>Research</label>
+				<input type="radio" name="Purchase" values="purchase">
+				<label>Purchase</label>
+			<br><br>
+			<label>Occupation :</label>
+				<select name="occupation" value="Select one" multiple>
+  					<option value="">Select One</option>
+  				</select>
+  			<br><br>
+ 			<label>Want us to send you junk mail :</label><br>
+				<input type="radio" name="yes" values="yes">
+				<label>Absolutely</label>
+				<input type="radio" name="no" values="no">
+				<label>No way man</label>
+ 			<br><br>
+ 			<tr>
+ 			<td id="t01">
+ 			<input type="submit" value="Submit Form" align="center">
+ 			<input type="reset" value=" Reset Form" align="center">
+			</td>
+			</tr>
+		</form>
+		</td>
+		</tr>
+</table>
+</div>
+
+
+</body>
+</html>
