@@ -1,0 +1,1 @@
+SELECT last_name,hire_date FROM employees WHERE manager_id IS NULL;
