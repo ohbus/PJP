@@ -33,9 +33,6 @@ Use these modules for your referneces and only if you have access to the questio
 
 [![Build Status](https://ci.subho.xyz/buildStatus/icon?subject=tm11+:+Servlets+and+JSP&job=PJP+Module+11)](https://ci.subho.xyz/job/PJP%20Module%2011/)
 
-### Use Eclipse to import these projects divided as each tech modules.
-#### All are built using Maven.
+### Use Eclipse to import these as Maven projects divided into each tech modules.
 
-
-
-Put a :star: if this helped you. Send a PR if you think this needs an update
+Put a :star: if this helped you. Send a PR if this needs an update.
