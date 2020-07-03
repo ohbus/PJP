@@ -15,7 +15,7 @@ Use these modules for your referneces and only if you have access to the questio
 
 [![Build Status](https://ci.subho.xyz/buildStatus/icon?subject=tm02+:+OOPS+/+Inheritance&job=PJP+Module+02)](https://ci.subho.xyz/job/PJP%20Module%2002/)
 
-[![Build Status](https://ci.subho.xyz/buildStatus/icon?subject=tm03+:+Abstraction+/Packages+/+Exception+Handling&job=PJP+Module+03)](https://ci.subho.xyz/job/PJP%20Module%2003/)
+[![Build Status](https://ci.subho.xyz/buildStatus/icon?subject=tm03+:+Abstraction+/+Packages+/+Exception+Handling&job=PJP+Module+03)](https://ci.subho.xyz/job/PJP%20Module%2003/)
 
 [![Build Status](https://ci.subho.xyz/buildStatus/icon?subject=tm04+:+Junit&job=PJP+Module+04)](https://ci.subho.xyz/job/PJP%20Module%2004/)
 
