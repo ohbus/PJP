@@ -295,6 +295,38 @@ jobs:
       run: mvn -B clean install --file pjp.tm09/pom.xml
 
 
+  build-tm10:
+
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
+        include:
+        - os: macos-latest
+          TARGET: x86_64-apple-darwin
+          COMPILER: clang
+          LINKER: clang
+
+        - os: ubuntu-latest
+          TARGET: armv7-unknown-linux-musleabihf
+          COMPILER: arm-linux-gnueabihf-gcc-5
+          LINKER: gcc-5-arm-linux-gnueabihf
+
+        - os: ubuntu-latest
+          TARGET: x86_64-unknown-linux-musl
+          COMPILER: gcc
+          LINKER: gcc
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Build with Maven
+      run: mvn -B clean install --file pjp.tm11/pom.xml
+
+
   build-tm11:
 
     runs-on: ${{ matrix.os }}

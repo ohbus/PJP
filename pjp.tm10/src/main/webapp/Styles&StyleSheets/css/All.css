@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+/* Question 1 */
+
+#q1div
+{
+	text-align: Center;
+	Font-Size : 27px;
+	Font-family: arial;
+}
+
+/* Question2 */
+
+.q2div
+{
+	text-align: Center;
+	font-size: 25px;
+	font-family: Verdana;
+}
+
+/* Question 3 */
+
+body
+{
+	font-size: 24px;
+	background-color: #00BFFF;
+	font-family: Verdana;
+}
