@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+    <parent>
+      <groupId>xyz.subho.wipro</groupId>
+    <artifactId>pjp.tm13</artifactId>
+    <version>1.0</version>
+    </parent>
+  <artifactId>HQL</artifactId>
+  <version>1.2</version>
+
+  <packaging>pom</packaging>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  <modules>
+  		<module>5_Assignment1</module>
+      <module>5_Assignment2</module>
+      <module>5_Assignment3</module>
+      <module>5_Assignment4</module>
+      <module>5_Assignment5</module>
+      <module>5_Assignment6</module>
+  </modules>
+
+</project>

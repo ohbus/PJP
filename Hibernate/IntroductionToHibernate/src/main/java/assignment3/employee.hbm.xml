@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="assignment3">
+<class name="Employee" table="Employee">
+<id name="Id">
+<generator class="increment"></generator>
+</id>
+<property name="Name" column="Name"></property>
+<property name="Designation" column="Designation"></property>
+<property name="Salary" column="Salary"></property>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping
+PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.wipro.bean.Car_Details" table="car_details">
+	<id name="regno" column="regno" type="string"></id>
+	<property name="color" column="color" type="string"></property>
+	<property name="manufacturer" column="manufacturer" type="string"></property>
+	<property name="model" column="model" type="string"></property>
+</class>
+</hibernate-mapping>
