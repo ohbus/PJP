@@ -116,7 +116,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean verify --file pjp.tm08/pom.xml
+      run: mvn -B clean verify --file RDBMS_SQL_JDBC/pom.xml
 
 
   build-tm09:
@@ -130,7 +130,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean verify --file pjp.tm09/pom.xml
+      run: mvn -B clean verify --file HTML/pom.xml
 
 
   build-tm10:
@@ -144,7 +144,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean verify --file pjp.tm10/pom.xml
+      run: mvn -B clean verify --file JavaScript_CSS/pom.xml
 
 
   build-tm11:
@@ -158,4 +158,4 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean verify --file pjp.tm11/pom.xml
+      run: mvn -B clean verify --file Servlets_JSP/pom.xml
