@@ -18,7 +18,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean verify --file pjp.tm01/pom.xml
+      run: mvn -B clean verify --file pjp.tm01.JavaFundamentals/pom.xml
   
   
   build-tm02:
@@ -32,7 +32,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean verify --file pjp.tm02/pom.xml
+      run: mvn -B clean verify --file pjp.tm02.OOPS.Inheritance/pom.xml
   
   
   build-tm03:
