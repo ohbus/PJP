@@ -46,7 +46,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean verify --file pjp.tm03/pom.xml
+      run: mvn -B clean verify --file pjp.tm03.Abstraction_Packages_ExceptionHandling/pom.xml
   
   
   build-tm04:
