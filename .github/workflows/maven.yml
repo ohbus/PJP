@@ -88,7 +88,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean verify --file pjp.tm06/pom.xml
+      run: mvn -B clean verify --file pjp.tm06.Collection/pom.xml
   
   
   build-tm07:
