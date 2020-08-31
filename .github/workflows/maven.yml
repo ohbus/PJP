@@ -1,4 +1,4 @@
-name: Java CI
+name: PJP CI
 
 on:
   push:
@@ -9,25 +9,7 @@ on:
 jobs:
   build-tm01:
 
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
-        include:
-        - os: macos-latest
-          TARGET: x86_64-apple-darwin
-          COMPILER: clang
-          LINKER: clang
-
-        - os: ubuntu-latest
-          TARGET: armv7-unknown-linux-musleabihf
-          COMPILER: arm-linux-gnueabihf-gcc-5
-          LINKER: gcc-5-arm-linux-gnueabihf
-
-        - os: ubuntu-latest
-          TARGET: x86_64-unknown-linux-musl
-          COMPILER: gcc
-          LINKER: gcc
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -36,30 +18,12 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean install --file pjp.tm01/pom.xml
+      run: mvn -B clean verify --file pjp.tm01/pom.xml
   
   
   build-tm02:
 
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
-        include:
-        - os: macos-latest
-          TARGET: x86_64-apple-darwin
-          COMPILER: clang
-          LINKER: clang
-
-        - os: ubuntu-latest
-          TARGET: armv7-unknown-linux-musleabihf
-          COMPILER: arm-linux-gnueabihf-gcc-5
-          LINKER: gcc-5-arm-linux-gnueabihf
-
-        - os: ubuntu-latest
-          TARGET: x86_64-unknown-linux-musl
-          COMPILER: gcc
-          LINKER: gcc
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -68,30 +32,12 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean install --file pjp.tm02/pom.xml
+      run: mvn -B clean verify --file pjp.tm02/pom.xml
   
   
   build-tm03:
 
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
-        include:
-        - os: macos-latest
-          TARGET: x86_64-apple-darwin
-          COMPILER: clang
-          LINKER: clang
-
-        - os: ubuntu-latest
-          TARGET: armv7-unknown-linux-musleabihf
-          COMPILER: arm-linux-gnueabihf-gcc-5
-          LINKER: gcc-5-arm-linux-gnueabihf
-
-        - os: ubuntu-latest
-          TARGET: x86_64-unknown-linux-musl
-          COMPILER: gcc
-          LINKER: gcc
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -100,30 +46,12 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean install --file pjp.tm03/pom.xml
+      run: mvn -B clean verify --file pjp.tm03/pom.xml
   
   
   build-tm04:
 
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
-        include:
-        - os: macos-latest
-          TARGET: x86_64-apple-darwin
-          COMPILER: clang
-          LINKER: clang
-
-        - os: ubuntu-latest
-          TARGET: armv7-unknown-linux-musleabihf
-          COMPILER: arm-linux-gnueabihf-gcc-5
-          LINKER: gcc-5-arm-linux-gnueabihf
-
-        - os: ubuntu-latest
-          TARGET: x86_64-unknown-linux-musl
-          COMPILER: gcc
-          LINKER: gcc
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -132,30 +60,12 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean install --file pjp.tm04/pom.xml
+      run: mvn -B clean verify --file pjp.tm04/pom.xml
   
   
   build-tm05:
 
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
-        include:
-        - os: macos-latest
-          TARGET: x86_64-apple-darwin
-          COMPILER: clang
-          LINKER: clang
-
-        - os: ubuntu-latest
-          TARGET: armv7-unknown-linux-musleabihf
-          COMPILER: arm-linux-gnueabihf-gcc-5
-          LINKER: gcc-5-arm-linux-gnueabihf
-
-        - os: ubuntu-latest
-          TARGET: x86_64-unknown-linux-musl
-          COMPILER: gcc
-          LINKER: gcc
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -164,30 +74,12 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean install --file pjp.tm05/pom.xml
+      run: mvn -B clean verify --file pjp.tm05/pom.xml
   
   
   build-tm06:
 
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
-        include:
-        - os: macos-latest
-          TARGET: x86_64-apple-darwin
-          COMPILER: clang
-          LINKER: clang
-
-        - os: ubuntu-latest
-          TARGET: armv7-unknown-linux-musleabihf
-          COMPILER: arm-linux-gnueabihf-gcc-5
-          LINKER: gcc-5-arm-linux-gnueabihf
-
-        - os: ubuntu-latest
-          TARGET: x86_64-unknown-linux-musl
-          COMPILER: gcc
-          LINKER: gcc
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -196,30 +88,12 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean install --file pjp.tm06/pom.xml
+      run: mvn -B clean verify --file pjp.tm06/pom.xml
   
   
   build-tm07:
 
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
-        include:
-        - os: macos-latest
-          TARGET: x86_64-apple-darwin
-          COMPILER: clang
-          LINKER: clang
-
-        - os: ubuntu-latest
-          TARGET: armv7-unknown-linux-musleabihf
-          COMPILER: arm-linux-gnueabihf-gcc-5
-          LINKER: gcc-5-arm-linux-gnueabihf
-
-        - os: ubuntu-latest
-          TARGET: x86_64-unknown-linux-musl
-          COMPILER: gcc
-          LINKER: gcc
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -228,30 +102,12 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean install --file pjp.tm07/pom.xml
+      run: mvn -B clean verify --file pjp.tm07/pom.xml
       
       
   build-tm08:
 
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
-        include:
-        - os: macos-latest
-          TARGET: x86_64-apple-darwin
-          COMPILER: clang
-          LINKER: clang
-
-        - os: ubuntu-latest
-          TARGET: armv7-unknown-linux-musleabihf
-          COMPILER: arm-linux-gnueabihf-gcc-5
-          LINKER: gcc-5-arm-linux-gnueabihf
-
-        - os: ubuntu-latest
-          TARGET: x86_64-unknown-linux-musl
-          COMPILER: gcc
-          LINKER: gcc
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -260,30 +116,12 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean install --file pjp.tm08/pom.xml
+      run: mvn -B clean verify --file pjp.tm08/pom.xml
 
 
   build-tm09:
 
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
-        include:
-        - os: macos-latest
-          TARGET: x86_64-apple-darwin
-          COMPILER: clang
-          LINKER: clang
-
-        - os: ubuntu-latest
-          TARGET: armv7-unknown-linux-musleabihf
-          COMPILER: arm-linux-gnueabihf-gcc-5
-          LINKER: gcc-5-arm-linux-gnueabihf
-
-        - os: ubuntu-latest
-          TARGET: x86_64-unknown-linux-musl
-          COMPILER: gcc
-          LINKER: gcc
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -292,30 +130,12 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean install --file pjp.tm09/pom.xml
+      run: mvn -B clean verify --file pjp.tm09/pom.xml
 
 
   build-tm10:
 
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
-        include:
-        - os: macos-latest
-          TARGET: x86_64-apple-darwin
-          COMPILER: clang
-          LINKER: clang
-
-        - os: ubuntu-latest
-          TARGET: armv7-unknown-linux-musleabihf
-          COMPILER: arm-linux-gnueabihf-gcc-5
-          LINKER: gcc-5-arm-linux-gnueabihf
-
-        - os: ubuntu-latest
-          TARGET: x86_64-unknown-linux-musl
-          COMPILER: gcc
-          LINKER: gcc
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -324,30 +144,12 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean install --file pjp.tm11/pom.xml
+      run: mvn -B clean verify --file pjp.tm10/pom.xml
 
 
   build-tm11:
 
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, ubuntu-latest, windows-latest]
-        include:
-        - os: macos-latest
-          TARGET: x86_64-apple-darwin
-          COMPILER: clang
-          LINKER: clang
-
-        - os: ubuntu-latest
-          TARGET: armv7-unknown-linux-musleabihf
-          COMPILER: arm-linux-gnueabihf-gcc-5
-          LINKER: gcc-5-arm-linux-gnueabihf
-
-        - os: ubuntu-latest
-          TARGET: x86_64-unknown-linux-musl
-          COMPILER: gcc
-          LINKER: gcc
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -356,4 +158,4 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean install --file pjp.tm11/pom.xml
+      run: mvn -B clean verify --file pjp.tm11/pom.xml
