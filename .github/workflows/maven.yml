@@ -18,7 +18,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean verify --file pjp.tm01.JavaFundamentals/pom.xml
+      run: mvn -B clean verify --file JavaFundamentals/pom.xml
   
   
   build-tm02:
@@ -32,7 +32,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean verify --file pjp.tm02.OOPS.Inheritance/pom.xml
+      run: mvn -B clean verify --file Inheritance/pom.xml
   
   
   build-tm03:
@@ -46,7 +46,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean verify --file pjp.tm03.Abstraction_Packages_ExceptionHandling/pom.xml
+      run: mvn -B clean verify --file Abstraction_Packages_ExceptionHandling/pom.xml
   
   
   build-tm04:
@@ -60,7 +60,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean verify --file pjp.tm04.Junit/pom.xml
+      run: mvn -B clean verify --file Junit/pom.xml
   
   
   build-tm05:
@@ -74,7 +74,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean verify --file pjp.tm05.WrapperClasses/pom.xml
+      run: mvn -B clean verify --file WrapperClasses/pom.xml
   
   
   build-tm06:
@@ -88,7 +88,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean verify --file pjp.tm06.Collection/pom.xml
+      run: mvn -B clean verify --file Collection/pom.xml
   
   
   build-tm07:
