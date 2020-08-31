@@ -1,6 +1,7 @@
 # Wipro PJP
 
-![Java CI](https://github.com/ohbus/PJP/workflows/Java%20CI/badge.svg)   [![Codacy Badge](https://api.codacy.com/project/badge/Grade/670499afb6df405782ae6785f593bf8b)](https://www.codacy.com/manual/ohbus/PJP?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ohbus/PJP&amp;utm_campaign=Badge_Grade)
+![PJP CI](https://github.com/ohbus/PJP/workflows/PJP%20CI/badge.svg)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/670499afb6df405782ae6785f593bf8b)](https://www.codacy.com/manual/ohbus/PJP?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ohbus/PJP&amp;utm_campaign=Badge_Grade)
 
 ## Wipro Pre Joining Program using Project Based Learning
 
