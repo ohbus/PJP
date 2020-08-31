@@ -32,7 +32,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean verify --file Inheritance/pom.xml
+      run: mvn -B clean verify --file OOPS_Inheritance/pom.xml
   
   
   build-tm03:
