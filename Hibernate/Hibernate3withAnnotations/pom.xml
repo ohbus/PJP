@@ -3,40 +3,48 @@
   <groupId>Hibernate3withAnnotations</groupId>
   <artifactId>Hibernate3withAnnotations</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <dependencies>
-<dependency>
-    <groupId>org.hibernate</groupId>
-    <artifactId>hibernate-core</artifactId>
-    <version>5.4.2.Final</version>
-    <type>pom</type>
-</dependency>
-<!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc6 -->
-<dependency>
-    <groupId>com.oracle.database.jdbc</groupId>
-    <artifactId>ojdbc6</artifactId>
-    <version>11.2.0.4</version>
-</dependency>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
 
-<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-hikaricp -->
-<dependency>
-    <groupId>org.hibernate</groupId>
-    <artifactId>hibernate-hikaricp</artifactId>
-    <version>5.4.2.Final</version>
-    <type>pom</type>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
-<dependency>
-    <groupId>org.hibernate</groupId>
-    <artifactId>hibernate-entitymanager</artifactId>
-    <version>6.0.0.Alpha5</version>
-    <type>pom</type>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.hibernate/ejb3-persistence -->
-<dependency>
-    <groupId>org.hibernate</groupId>
-    <artifactId>ejb3-persistence</artifactId>
-    <version>3.3.2.Beta1</version>
-    <type>pom</type>
-</dependency>
-</dependencies>
+
+  <dependencies>
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>5.4.2.Final</version>
+        <type>pom</type>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc6 -->
+    <dependency>
+        <groupId>com.oracle.database.jdbc</groupId>
+        <artifactId>ojdbc6</artifactId>
+        <version>11.2.0.4</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-hikaricp -->
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-hikaricp</artifactId>
+        <version>5.4.2.Final</version>
+        <type>pom</type>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-entitymanager</artifactId>
+        <version>6.0.0.Alpha5</version>
+        <type>pom</type>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.hibernate/ejb3-persistence -->
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>ejb3-persistence</artifactId>
+        <version>3.3.2.Beta1</version>
+        <type>pom</type>
+    </dependency>
+  </dependencies>
 </project>
