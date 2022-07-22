@@ -5,12 +5,9 @@
 
 ## Wipro Pre Joining Program using Project Based Learning
 
+### Disclaimer:
+Use these modules only for your reference and if you have access to the questions. The questions can be viewed from the project link by signing in with your Resume Number
 
-
-Disclaimer:
-Use these modules for your referneces and only if you have access to the questions which can be viewd from the project link by signing in with your Resume Number
-
-
-### Use Eclipse to import these as Maven projects divided into each tech modules.
+***Use Eclipse to import these as Maven projects divided into each tech modules.***
 
 Put a :star: if this helped you. Send a PR if this needs an update.
